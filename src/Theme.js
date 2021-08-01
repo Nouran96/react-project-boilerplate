@@ -47,8 +47,8 @@ function ThemeApp() {
     typography: {
       fontFamily:
         lang === "en"
-          ? ["Nunito-Regular", ...defaultFontFamilies].join(",")
-          : ["Tajawal-Regular", ...defaultFontFamilies].join(","),
+          ? ["Roboto-Regular", ...defaultFontFamilies].join(",")
+          : ["Dubai-Regular", ...defaultFontFamilies].join(","),
       button: {
         fontSize: "1rem",
         fontWeight: 600,

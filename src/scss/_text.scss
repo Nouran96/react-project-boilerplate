@@ -1,0 +1,15 @@
+html {
+  font-size: 14px;
+}
+
+@each $fontFamily in $fontFamilies {
+  @each $fontExtention in $fontExtentions {
+    @font-face {
+      font-family: #{$fontFamily};
+      src: url("../assets/fonts/#{$fontFamily}.#{$fontExtention}");
+    }
+    .#{$fontFamily} {
+      font-family: #{$fontFamily};
+    }
+  }
+}
