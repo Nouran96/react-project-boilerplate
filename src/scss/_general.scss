@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  min-height: 100vh;
+  margin: 0;
+
+  & * {
+    unicode-bidi: plaintext;
+  }
+
+  .f_size_14 {
+    font-size: 0.875em !important;
+  }
+  .f_size_16 {
+    font-size: 1em !important ;
+  }
+  .f_size_18 {
+    font-size: 1.125em !important;
+  }
+  .f_size_20 {
+    font-size: 1.25em !important;
+  }
+}

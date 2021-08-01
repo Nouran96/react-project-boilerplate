@@ -1,0 +1,8 @@
+.rtl {
+  text-align: right;
+  direction: rtl;
+
+  & * {
+    unicode-bidi: normal;
+  }
+}

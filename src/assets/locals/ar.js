@@ -2,5 +2,13 @@
 export default {
   ar: {
     hello: "مرحبا",
+    navbar: {
+      dashboard: "الرئيسية",
+      cases: "القضايا",
+      userManagement: "إدارة المستخدم",
+      revisions: "المراجعات",
+      contracts: "العقود",
+      settings: "الاعدادات",
+    },
   },
 };
