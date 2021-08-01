@@ -1,4 +1,4 @@
-# legalx-frontend
+# React Boilerplate
 
 ## Setup
 
