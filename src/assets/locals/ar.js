@@ -10,5 +10,8 @@ export default {
       contracts: "العقود",
       settings: "الاعدادات",
     },
+    errors: {
+      errorOccurred: "حدث خطأ ما!",
+    },
   },
 };

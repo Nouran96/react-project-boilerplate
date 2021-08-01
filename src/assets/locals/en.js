@@ -10,5 +10,8 @@ export default {
       contracts: "Contracts",
       settings: "Settings",
     },
+    errors: {
+      errorOccurred: "Error Occurred!",
+    },
   },
 };

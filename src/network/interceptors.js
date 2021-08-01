@@ -1,7 +1,7 @@
 import store from "../../store";
 import { loader } from "../../store/Loader/actions";
 import Auth from "../../utils/Auth";
-// import { dispatchSnackbarError } from "../../utils/Shared";
+import { dispatchSnackbarError } from "../../utils/Shared";
 import messages from "../../assets/Local/messages";
 
 export const isHandlerEnabled = (config = {}) => {
@@ -33,6 +33,11 @@ export const successHandler = (response) => {
 };
 
 export const errorHandler = (error) => {
+  const lang = store.getState().lang;
+
+  typeof error.response === "undefined" &&
+    dispatchSnackbarError(messages[lang].errors.errorOccurred);
+
   if (isHandlerEnabled(error.config)) {
     store.dispatch(loader(false));
     error.response.status === 401 && Auth.signOut();
