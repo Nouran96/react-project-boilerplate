@@ -1,0 +1,12 @@
+.MuiIconButton-root {
+  outline: none !important;
+}
+
+.valid .MuiInput-root {
+  border-bottom: 2px solid green;
+}
+
+.valid .MuiInput-underline:hover:not(.Mui-disabled):before,
+.valid .MuiInput-underline:after {
+  border-bottom: none;
+}

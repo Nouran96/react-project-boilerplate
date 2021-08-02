@@ -32,7 +32,7 @@ function ThemeApp() {
     palette: {
       type: "light",
       primary: {
-        main: "#fff",
+        main: "#000",
       },
       secondary: {
         main: "#ac4556",
