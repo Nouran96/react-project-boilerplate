@@ -1,8 +1,9 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-import InputField from "../../components/Controls/InputField";
 import { injectIntl } from "react-intl";
+import InputField from "../../components/Controls/InputField";
+import ButtonComponent from "../../components/Controls/Button";
 import EmailIcon from "../../assets/images/icons/envelope.svg";
 import PasswordIcon from "../../assets/images/icons/lock.svg";
 
@@ -14,7 +15,7 @@ const Login = (props) => {
   });
 
   return (
-    <div style={{ width: "200px", margin: "auto" }}>
+    <div style={{ width: "400px", margin: "auto" }}>
       <Formik
         initialValues={{ email: "", password: "" }}
         validationSchema={schema}
@@ -63,7 +64,11 @@ const Login = (props) => {
               startIcon={PasswordIcon}
             />
             <div className="d-flex justify-content-end mt-3">
-              <button type="submit">Login</button>
+              <ButtonComponent
+                content="Sign in"
+                fullWidth
+                handleClick={handleSubmit}
+              />
             </div>
           </Form>
         )}

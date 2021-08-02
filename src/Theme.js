@@ -35,7 +35,7 @@ function ThemeApp() {
         main: "#000",
       },
       secondary: {
-        main: "#ac4556",
+        main: "rgba(208, 158, 92, 1)",
       },
       background: {
         drawer: "rgba(22, 69, 111, 1)",

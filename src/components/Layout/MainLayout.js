@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { injectIntl } from "react-intl";
 import { makeStyles } from "@material-ui/core/styles";
 import {
@@ -19,6 +19,7 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import MenuIcon from "@material-ui/icons/Menu";
 import ExpandMore from "@material-ui/icons/ExpandMore";
+import { useLocation } from "react-router";
 
 const drawerWidth = 240;
 
@@ -38,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
     zIndex: theme.zIndex.drawer + 1,
+    backgroundColor: "#fff",
   },
   drawerContainer: {
     overflow: "auto",
@@ -79,14 +81,14 @@ function MainLayout(props) {
     {
       name: "dashboard",
       path: "",
-      activeCondition: History.location.pathname.split("/")[2] === "",
+      activeCondition: History.location.pathname.split("/")[1] === "",
       text: messages.navbar.dashboard,
       subLink: false,
     },
     {
       name: "cases",
       path: "cases",
-      activeCondition: History.location.pathname.split("/")[2] === "cases",
+      activeCondition: History.location.pathname.split("/")[1] === "cases",
       text: messages.navbar.cases,
       subLink: false,
     },
@@ -94,28 +96,28 @@ function MainLayout(props) {
       name: "userManagement",
       path: "userManagement",
       activeCondition:
-        History.location.pathname.split("/")[2] === "userManagement",
+        History.location.pathname.split("/")[1] === "userManagement",
       text: messages.navbar.userManagement,
       subLink: false,
     },
     {
       name: "revisions",
       path: "revisions",
-      activeCondition: History.location.pathname.split("/")[2] === "revisions",
+      activeCondition: History.location.pathname.split("/")[1] === "revisions",
       text: messages.navbar.revisions,
       subLink: false,
     },
     {
       name: "contracts",
       // path: "contracts",
-      activeCondition: History.location.pathname.split("/")[2] === "contracts",
+      activeCondition: History.location.pathname.split("/")[1] === "contracts",
       text: messages.navbar.contracts,
       subLink: [
         {
           path: "contracts/test",
           activeCondition:
-            History.location.pathname.split("/")[2] === "contracts" &&
-            History.location.pathname.split("/")[3] === "test",
+            History.location.pathname.split("/")[1] === "contracts" &&
+            History.location.pathname.split("/")[2] === "test",
           text: messages.navbar.contracts,
           subLink: false,
         },
@@ -124,7 +126,7 @@ function MainLayout(props) {
     {
       name: "settings",
       path: "settings",
-      activeCondition: History.location.pathname.split("/")[2] === "settings",
+      activeCondition: History.location.pathname.split("/")[1] === "settings",
       text: messages.navbar.settings,
       subLink: false,
     },
